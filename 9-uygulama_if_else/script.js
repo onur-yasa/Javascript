@@ -7,7 +7,7 @@
 //     console.log("sayı 10-50 arasında değildir.");
 // }
 
-// 2- Bir sayının pozitif tek sayı olup olmadığını kontrol ediniz.
+// 2- Bir sayının pozitif ya da tek sayı olup olmadığını kontrol ediniz.
 
 //  let sayi=20; 
 //  if (sayi % 2 == 1 || sayi > 0)

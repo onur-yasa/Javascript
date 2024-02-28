@@ -92,7 +92,7 @@ let siparis_2 = {
 
 
 let siparis1_toplam = (siparis_1.urunler[0].urun_fiyat + siparis_1.urunler[1].urun_fiyat) * 1.18;
-let siparis2_toplam = (siparis_1.urunler[0].urun_fiyat) * 1.18;
+let siparis2_toplam = (siparis_2.urunler[0].urun_fiyat) * 1.18;
 
 let toplam_siparis = siparis1_toplam + siparis2_toplam;
 

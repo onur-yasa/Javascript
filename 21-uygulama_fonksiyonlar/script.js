@@ -10,13 +10,13 @@ function kelimeYazdir(kelime, adet) {
 
 // 2- Dikdörtgenin alan ve çevresini hesaplayan fonksiyonu yazınız.
 
-function alanCevreHesapla(kisa, uzun) {
-    let alan = kisa * uzun;
-    let cevre = (kisa + uzun) * 2;
+// function alanCevreHesapla(kisa, uzun) {
+//     let alan = kisa * uzun;
+//     let cevre = (kisa + uzun) * 2;
 
-    return `alan: ${alan} çevre: ${cevre}`
-}
-let sonuc = alanCevreHesapla(7, 10);
+//     return `alan: ${alan} çevre ${cevre}`;
+// }
+// let sonuc = alanCevreHesapla(7, 10);
 // console.log(sonuc);
 
 // 3- Yazı tura uygulamasını fonksiyon kullanarak yapınız.

@@ -1,15 +1,14 @@
-function selamlama(msg) {
-    console.log(msg);
-}
+// function selamlama(msg) {
+//     console.log(msg);
+// }
 
-selamlama("selam");
-selamlama("merhaba");
-selamlama("iyi günler");
+// selamlama("selam");
+// selamlama("merhaba");
+// selamlama("iyi günler");
 
 function yasHesapla(dogumYili) {
     return new Date().getFullYear() - dogumYili;
 }
-
 let yasAhmet = yasHesapla(1985);
 let yasAyse = yasHesapla(1987);
 

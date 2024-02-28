@@ -16,14 +16,15 @@ console.log(meyveler.length);
 
 // 5- Kiraz meyvesini listenin sonuna ekleyiniz.
 
-meyveler[meyveler.length] = "Kiraz";
+// meyveler[meyveler.length] = "Kiraz";
 meyveler.push("Kiraz");
 // 6- Dizinin son 2 elemanını siliniz.
 
 // meyveler.pop();
 // meyveler.pop();
 
-// meyveler.splice(meyveler.length - 2, 2);
+meyveler.splice(meyveler.length - 2, 2);
+console.log(meyveler);
 
 // 7- Aşağıdaki bilgileri dizi içerisinde saklayınız ve her öğrencinin yaşını ve not ortalamasını hesaplayınız.
 /*

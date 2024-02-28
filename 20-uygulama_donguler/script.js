@@ -23,13 +23,13 @@ let sayilar = [1, 5, 7, 15, 3, 25, 12, 24];
 // }
 // console.log(toplam)
 
-//   let urunler = ["iphone 12","samsung s22","iphone 13","samsung s23","samsung s20"];
+   let urunler = ["iphone 12","samsung s22","iphone 13","samsung s23","samsung s20"];
 
 // 4- urunler listesindeki tüm ürünleri büyük harf ile yazdırınız.
 
-// for(let urun of urunler){
-//     console.log(urun.toUpperCase());
-// }
+for(let urun of urunler){
+    console.log(urun.toUpperCase());
+}
 
 // 5- urunler listesinde samsung geçen kaç ürün vardır?
 
@@ -86,7 +86,7 @@ for(let ogrenci of ogrenciler) {
 }
 
 let not_toplam = 0;
-for(ogr_ortalama of ogrenci_ortalamalar) {
+for(let ogr_ortalama of ogrenci_ortalamalar) {
     not_toplam += ogr_ortalama;
 }
 
