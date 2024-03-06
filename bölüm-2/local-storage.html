@@ -82,12 +82,11 @@
 
         "use strict";
         
-        let gorevListesi = [
-            {"id": 1, "gorevAdi": "Görev 1", "durum": "completed"},
-            {"id": 2, "gorevAdi": "Görev 2", "durum": "completed"},
-            {"id": 7, "gorevAdi": "Görev 3", "durum": "completed"},
-            {"id": 4, "gorevAdi": "Görev 4", "durum": "pending"}
-        ];
+        let gorevListesi = [];
+
+        if (localStorage.getItem("gorevListesi") !== null) {
+            gorevListesi = JSON.parse(localStorage.getItem("gorevListesi"));
+        }
 
         let editId;
         let isEditTask = false;
@@ -98,8 +97,8 @@
         
         displayTasks("all");
 
-         function displayTasks(filter) {  
-            let ul = document.getElementById("task-list"); 
+        function displayTasks(filter) {
+            let ul = document.getElementById("task-list");
             ul.innerHTML = "";
 
             if (gorevListesi.length == 0) {
@@ -143,10 +142,10 @@
             }
         });
 
-        for(let span of filters) { // filters altındaki span etiketlerini tek etek dolaşıcaz.
-            span.addEventListener("click", function() { //her ulaştığım span bilgisine bir event ilişkilendiriyoruz.click eventi. function çalışacak tıklama anında 
-                document.querySelector("span.active").classList.remove("active"); //spanı aktif olan elamanı seç, aktif kılası varsa ve ona tıkladıysam bu durumda class nesenesi içerisinden remove metodu arcılığıyla active classını sil.
-                span.classList.add("active");  //ulaşmış olduğum span elamanına  classlistesi üzeründen ulaş ve add diyerek aktifi ekle.
+        for(let span of filters) {
+            span.addEventListener("click", function() {
+                document.querySelector("span.active").classList.remove("active");
+                span.classList.add("active");
                 displayTasks(span.id);
             })
         }
@@ -158,7 +157,7 @@
             } else {
                 if(!isEditTask) {
                     // ekleme
-                    gorevListesi.push({"id": gorevListesi.length + 1, "gorevAdi": taskInput.value});
+                    gorevListesi.push({"id": gorevListesi.length + 1, "gorevAdi": taskInput.value, "durum": "pending"});
                 } else {
                     // güncelleme
                     for(let gorev of gorevListesi) {
@@ -170,6 +169,7 @@
                 }
                 taskInput.value = "";
                 displayTasks(document.querySelector("span.active").id);
+                localStorage.setItem("gorevListesi", JSON.stringify(gorevListesi));
             }
 
             event.preventDefault();
@@ -187,6 +187,7 @@
 
             gorevListesi.splice(deletedId, 1);
             displayTasks(document.querySelector("span.active").id);
+            localStorage.setItem("gorevListesi", JSON.stringify(gorevListesi));
         }
 
         function editTask(taskId, taskName) {
@@ -202,6 +203,7 @@
 
         btnClear.addEventListener("click", function() {
             gorevListesi.splice(0, gorevListesi.length);
+            localStorage.setItem("gorevListesi", JSON.stringify(gorevListesi));
             displayTasks();
         })
       
@@ -223,6 +225,10 @@
                     gorev.durum = durum;
                 }
             }
+
+            displayTasks(document.querySelector("span.active").id);
+
+            localStorage.setItem("gorevListesi", JSON.stringify(gorevListesi));
         }
     </script>
 

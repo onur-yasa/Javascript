@@ -18,7 +18,7 @@
         }
 
         .task label.checked {
-        text-decoration: line-through;    /* üstünü çizme */
+            text-decoration: line-through;          
         }
     </style>
     <title>Document</title>
@@ -173,22 +173,25 @@
         })
       
         function updateStatus(selectedTask) {
-            // console.log(selectedTask.parentElemet.lastElemetChild);
-            let label = selectedTask.nextElemetSibling;
+            // console.log(selectedTask.parentElement.lastElementChild);
+            let label = selectedTask.nextElementSibling;
             let durum;
 
-            if(selectedTask.checked){
+            if(selectedTask.checked) {
                 label.classList.add("checked");
-                durum ="completed";
-            }else {
+                durum = "completed";
+            } else {
                 label.classList.remove("checked");
-                durum = "pending";  
+                durum = "pending";
             }
 
-            for(let gorev of gorevListesi)
-                if(gorev.id==selectedTask.id) {
+            for (let gorev of gorevListesi) {
+                if(gorev.id == selectedTask.id) {
                     gorev.durum = durum;
                 }
+            }
+
+            console.log(gorevListesi);
         }
     </script>
 
