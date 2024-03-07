@@ -20,15 +20,18 @@ function newTask(){
     let inputvalue=inputelement.value;
 
     
-    if(inputvalue!==""){  
-
+    if(inputvalue!==""){ 
+         
         gorevList.push(inputvalue);  
 
         inputelement.value="";
-        displayTasks();
+        displayTasks()}
+        else{
+            alert("görev giriniz");
+        }
       
         
-    }
+    
 }
 
 function allDelete(){
