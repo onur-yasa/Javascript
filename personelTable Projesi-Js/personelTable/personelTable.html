@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personel Table</title>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,400;0,500;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8f642f7f37.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="personelTable.css">
+</head>
+
+<body>
+    <div class="header"><img class="headerimg" src="https://ankageo.com/wp-content/uploads/2021/02/katman-2@2x.png"
+            alt="AnkaGeo"></div>
+    <div class="registerPage">
+        <div class="registerbox1">
+            <img class="ankatext" src="ankaLogo.png" alt="AnkaGeo" width="300" height="300">
+            <img class="ankaLogo" src="https://ankageo.com/wp-content/uploads/2021/02/katman-2@2x.png" alt="AnkaGeo">
+            <div class="signup-form">
+                <div class="signup-Input">
+                    <label>ID</label>
+                    <label id="generateduser-id"></label><button onclick="generateUserId()" class="id-button">ID Oluştur</button>
+                </div>
+                <div class="signup-Input">
+                    <label>Ad</label><input type="text" id="name" placeholder="Adınızı Giriniz. *" required>
+                </div>
+                <div class="signup-Input">
+                    <label>Soyad</label><input type="text" id="surname" placeholder="Soyadınızı Giriniz. *" required>
+                </div>
+                <div class="signup-Input">
+                    <label>T.C.</label> <input type="text" inputmode="numeric" id="tc" placeholder="TC Giriniz. *"
+                        maxlength="11" required>
+                </div>
+                <div class="signup-Input">
+                    <p>Telefon</p> <input type="text" id="tel" placeholder="Telefon Giriniz.">
+                </div>
+                <div class="signup-Input">
+                    <p>Lütfen '*' alanları eksiksiz şekilde doldurunuz</p><button class="signup-form-btn"
+                        onclick="addUser()">Gönder</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="registerbox2">
+            <img class="ankatext" src="ankaLogo.png" alt="AnkaGeo" width="300" height="300">
+            <img class="ankaLogo" src="Ankageo2.png" alt="AnkaGeo">
+            <div class="signup-form">
+                <div class="signup-Input">
+                    <p>ID</p>
+                    <p id="edit-id">
+                </div>
+                <div class="signup-Input">
+                    <label>Ad</label><input type="text" id="edit-name" required>
+                </div>
+                <div class="signup-Input">
+                    <label>Soyad</label><input type="text" id="edit-surname" required>
+                </div>
+                <div class="signup-Input">
+                    <p>T.C.</p> <input type="text" id="edit-tc" minlength="11" maxlength="11" required>
+                </div>
+                <div class="signup-Input">
+                    <p>Telefon</p> <input type="text" id="edit-tel">
+                </div>
+                <div class="signup-Input">
+                    <button class="signup-form-btn" onclick="updateEditUser()">Gönder</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tablePage">
+        <div class="table-form">
+            <p>DATABASE</p>
+            <div>
+                <input id="no-id-del" type="text" placeholder="ID" maxlength="7">
+                <button class="no-id-del" onclick="deleteUser()">DELETE</button>
+                <button class="removeAll" onclick="deleteAllTasks()">Delete All</button>
+            </div>
+            <p class="delnote">Silmek istediğiniz verinin ID'sini giriniz</p>
+        </div>
+        <table id="personelTable">
+            <tr>
+                <th>NO</th>
+                <th>ID</th>
+                <th>AD</th>
+                <th>SOYAD</th>
+                <th>TC</th>
+                <th>TELEFON</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+    <script src="personelTable.js"></script>
+</body>
+
+</html>

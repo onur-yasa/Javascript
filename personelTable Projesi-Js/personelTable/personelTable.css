@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(179, 179, 179);
+    min-width: 750px;
+    font-family: Roboto, Tahoma, sans-serif;
+}
+
+.header {
+    width: 100%;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    height: 15%;
+    box-shadow: 0px 10px 10px grey;
+    position: relative;
+}
+
+/* .headerimg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+.registerPage {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+.registerPage p {
+    margin-top: 10px;
+    font-weight: 900;
+}
+
+.signup-Input {
+    position: relative;
+}
+.id-button {
+    margin-bottom: 5px;
+}
+#generateduser-id, #edit-id{
+    /* position: relative;
+    right: 8%; */
+    position: absolute;
+    left: 25%;
+    
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    left: 20px;
+    bottom: 30px;
+    font-size: 12px;
+    width: 90%;
+    position: absolute;
+}
+
+.signup-Input p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.signup-Input label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.signup-form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-Input input {
+    width: 75%;
+    height: 30px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    text-align: left;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.registerbox1 {
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px grey;
+    height: 400px;
+    width: 30%;
+    position: relative;
+    z-index: 0;
+}
+
+.registerbox2 {
+    background-color: rgb(78, 78, 78);
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px grey;
+    height: 400px;
+    width: 30%;
+    position: relative;
+    z-index: 0;
+
+}
+
+.ankatext {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: 45px;
+    top: 30px;
+
+}
+
+.ankaLogo {
+    position: absolute;
+    width: 40%;
+    right: 20px;
+    top: 35px;
+
+}
+
+.tablePage {
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    padding: 20px;
+}
+
+.table-form {
+    background-color: rgb(230, 60, 43);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 80px;
+}
+
+
+.table-form  div{
+    display: flex;
+    justify-content: flex-end;
+    vertical-align: top;
+}
+
+.table-form p:first-child{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 8px 8px;
+    font-size: 14px;
+    font-family: system-ui;
+
+}
+.removeAll {
+    cursor: pointer;
+    height: 30px;
+    background-color: rgb(94, 96, 95);
+    color: white;
+    margin-top: 8px;
+    padding: 4px 2px;
+    font-size: 12px;
+    border: solid 2px black;
+    float: inline-end;
+    margin-right: 20px;
+
+}
+
+#no-id-del {
+    margin-top: 8px;
+    width: 20%;
+    height: 30px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    text-align: left;
+    padding: 4px 8px;
+
+    font-size: 12px;
+    border: none;
+}
+
+.no-id-del {
+    background-color: black;
+    color: white;
+    padding: 4px 2px;
+    margin-top: 8px;
+    cursor: pointer;
+    height: 30px;
+    border: none;
+}
+
+.delnote {
+    /* font-size: 10px;
+    color: white;
+    width: 99%;
+    text-align: right;
+    margin-right: 20px; */
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 8px;
+}
+
+#personelTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td {
+    border-bottom: 0 solid rgb(233, 231, 232);
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: rgb(233, 231, 232);
+}
+
+tr{
+    background-color:white;
+}
+
+.signup-form-btn {
+    background-color: black;
+    color: white;
+    padding: 4px 2px;
+    margin: 4px 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn {
+    cursor: pointer;
+    margin:0px 5px;
+    padding:0px 3px;
+    border-radius: 5px;
+}
+
+.del-btn {
+    cursor: pointer;
+    margin:0px 5px;
+    padding:0px 3px;
+    border-radius: 5px;
+}
