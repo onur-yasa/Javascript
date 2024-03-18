@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personel Table</title>
-    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,400;0,500;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,400;0,500;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/8f642f7f37.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="personelTable.css">
 </head>
@@ -20,7 +22,8 @@
             <div class="signup-form">
                 <div class="signup-Input">
                     <label>ID</label>
-                    <label id="generateduser-id"></label><button onclick="generateUserId()" class="id-button">ID Oluştur</button>
+                    <label id="generateduser-id"></label><button onclick="generateUserId()" class="id-button">ID
+                        Oluştur</button>
                 </div>
                 <div class="signup-Input">
                     <label>Ad</label><input type="text" id="name" placeholder="Adınızı Giriniz. *" required>
@@ -72,12 +75,15 @@
     <div class="tablePage">
         <div class="table-form">
             <p>DATABASE</p>
-            <div>
-                <input id="no-id-del" type="text" placeholder="ID" maxlength="7">
-                <button class="no-id-del" onclick="deleteUser()">DELETE</button>
-                <button class="removeAll" onclick="deleteAllTasks()">Delete All</button>
+            <div class="table-form-content">
+                <div>
+                    <input id="no-id-del" type="text" placeholder="ID" maxlength="7">
+                    <button class="no-id-del" onclick="deleteUser()">DELETE</button>
+                    <button class="removeAll" onclick="deleteAllTasks()">Delete All</button>
+                </div>
+                <p class="delnote">Silmek istediğiniz verinin ID'sini giriniz</p>
             </div>
-            <p class="delnote">Silmek istediğiniz verinin ID'sini giriniz</p>
+
         </div>
         <table id="personelTable">
             <tr>

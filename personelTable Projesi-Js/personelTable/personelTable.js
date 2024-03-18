@@ -140,7 +140,7 @@ function deleteRow(row) {
 }
 
 function updateEditUser() {
-    // var editId = document.getElementById("edit-id").innerText;
+     var editId = document.getElementById("edit-id").innerText;
     var editName = document.getElementById("edit-name").value;
     var editSurname = document.getElementById("edit-surname").value;
     var editTc = document.getElementById("edit-tc").value;
