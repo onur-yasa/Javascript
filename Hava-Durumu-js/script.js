@@ -15,15 +15,15 @@ inputField.addEventListener("keyup", e => {
 
 locationBtn.addEventListener("click", ()=>{
     if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(onSuccess, onError)
+        navigator.geolocation.getCurrentPosition(onSuccess, onError) //anlık konumu almak için.
     }else{
         console.log("Tarayıcınız geolocation'ı desteklemiyor...")
     }
 })
 
 function onSuccess(position){
-    const {latitude, longitude} = position.coords;
-    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=a16e33bdb752c9b5778d38c42614a6e4`;
+    const {latitude, longitude} = position.coords; ///koordinat çekme işi
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=a16e33bdb752c9b5778d38c42614a6e4`; //apiye gönderdik.
     fetchData()
 }
 
